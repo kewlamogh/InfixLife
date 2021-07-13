@@ -1,4 +1,15 @@
-//Infix Life
+
+class Person(val name: String, var age: Int, val gender: Gender) {
+    val myFriends: MutableList<Person> = mutableListOf()
+    val interactions: MutableMap<String, String> = mutableMapOf()
+    var thingsDoneToday = mutableListOf<String>()
+    fun getOlder(byHowMuch: Int = 1) {
+        this.age += byHowMuch
+    }
+    fun findInteractions(): String {
+        return "["+this.interactions.toString().replace("}", "").replace("{", "").replace("=", ": ") +"]"
+    }
+    fun findMyFriends(getNamesOnly: Boolean): Any {
         var output = mutableListOf<Any>()
         if (getNamesOnly) {
         	for (iterator in this.myFriends) {
@@ -25,13 +36,15 @@
     }
     
 }
+
 enum class Gender {MALE, FEMALE}
 infix fun String.to(person: Person): Action {
     return Action(person, this)
 }
 data class SidePair(val first: List<Person>, val second: List<Person>)
 data class Action(val person: Person,  val msg: String)
-val opposites = mutableListOf<SidePair>()
+
+
 fun main() {
     val amogh = Person("Amogh", 9, Gender.MALE)
     val dad = Person("Prashant", 253, Gender.MALE)
