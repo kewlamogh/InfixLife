@@ -25,4 +25,4 @@ val myCommunity = Community();
 |Person.thingsDoneToday|returns list of Strings that contains all done today|
 |Community.newDay()|New day for community; thingsDoneToday will be reset.| 
 
-## Enjoy! What can you create with this? Email save codes to your friends back-and-forth to your friends (use [this](https://play.kotlinlang.org))!
+## Enjoy! What can you create with this? Email save codes to your friends back-and-forth (use [this](https://play.kotlinlang.org))!
