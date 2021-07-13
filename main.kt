@@ -1,4 +1,5 @@
 //Infix Life
+import classes
 val opposites = mutableListOf<SidePair>()
 fun main() {
     val amogh = Person("Amogh", 9, Gender.MALE)
