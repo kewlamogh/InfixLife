@@ -57,14 +57,17 @@ class Person(val name: String, var age: Int = 0, val gender: Gender) {
     }
     
 }
-fun newDayFor(systemOfCreatures: List<Person>) {
-   for (i in systemOfCreatures) {
-      i.thingsDoneToday = mutableListOf<String>()
-   }
-}
 enum class Gender {MALE, FEMALE}
 infix fun String.to(person: Person): Action {
     return Action(person, this)
+}
+class Community() {
+    val people = mutableListOf<Person>();
+    fun newDay() {
+        for (i in this.people) {
+            i.thingsDoneToday = mutableListOf<String>()
+        }
+    }
 }
 
 data class Action(val person: Person,  val msg: String)
