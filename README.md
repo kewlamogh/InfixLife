@@ -1,6 +1,6 @@
 # InfixLife! 
 ## The super-amazing City making sandbox program in Kotlin.
-## How to use:
+## How to use
 First copy paste/import all the classes. All of them (including `enum` and `data`)!
 Next  create your first person like this:
 ```kt
@@ -11,7 +11,7 @@ And your first community:
 val myCommunity = Community();
 ```
 
-## Funcs
+## Functions
 |Function|Purpose|
 |---|---|
 |Person.getOlder(byHowMuch: Int = 1)|Increases age of character by `byHowMuch`|
